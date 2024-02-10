@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, StatusBar } from 'react-native';
+import HomePage from './src/pages/homePage/HomePage';
+import { useFonts } from 'expo-font';
+import { Prompt_700Bold, Prompt_600SemiBold } from '@expo-google-fonts/prompt';
+import { MartelSans_700Bold, MartelSans_600SemiBold } from '@expo-google-fonts/martel-sans';
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    Prompt_700Bold,
+    Prompt_600SemiBold,
+    MartelSans_700Bold,
+    MartelSans_600SemiBold
+  });
+
+  if (!fontsLoaded) {
+    return <Text>Loading...</Text>
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <StatusBar barStyle='light-content' />
+      <HomePage></HomePage>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'black',
   },
 });
