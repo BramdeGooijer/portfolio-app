@@ -1,4 +1,4 @@
-import { StyleSheet, View, StatusBar } from 'react-native';
+import { StyleSheet, View, StatusBar, Text } from 'react-native';
 import HomePage from './src/pages/homePage/HomePage';
 import { useFonts } from 'expo-font';
 import { Prompt_700Bold, Prompt_600SemiBold } from '@expo-google-fonts/prompt';
