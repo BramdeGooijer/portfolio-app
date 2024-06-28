@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         paddingHorizontal: 16,
         paddingVertical: 12,
-        backgroundColor: "#181818"
+        backgroundColor: "#181818",
     },
     titleText: {
         color: 'white',

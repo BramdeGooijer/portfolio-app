@@ -3,6 +3,7 @@ import AboutMeHomePageItem from "../../components/homePage/AboutMeHomePageItem";
 import ProjectHomePageItem from "../../components/homePage/ProjectHomePageItem";
 import MyMusicHomePageItem from "../../components/homePage/MyMusicHomePageItem";
 import EntertainmentHomePageItem from "../../components/homePage/EntertainmentHomePageItem";
+import SportsHomePageItem from "../../components/homePage/SportsHomePageItem";
 
 export default function HomePage() {
     return (
@@ -27,6 +28,7 @@ export default function HomePage() {
 
                     <MyMusicHomePageItem></MyMusicHomePageItem>
                     <EntertainmentHomePageItem></EntertainmentHomePageItem>
+                    <SportsHomePageItem></SportsHomePageItem>
                 </View>
             </ScrollView>
         </View>
