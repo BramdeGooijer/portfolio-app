@@ -1,24 +1,26 @@
-import { StyleSheet, Text, Image, View } from "react-native";
+import { StyleSheet, Text, Image, View, TouchableOpacity } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 
 export default function AboutMeHomePageItem() {
     const age = Math.floor((new Date() - new Date("2004-01-26")) / (1000 * 60 * 60 * 24 * 365.25));
 
     return (
-        <LinearGradient
-        colors={['#1B48E9', 'transparent']}
-        start={{ x: 0.8, y: 1 }}
-        end={{ x: -2, y: 1 }}
-        style={styles.container}>
-            <View style={styles.textContainer}>
-                <Text style={styles.titleText}>Over mij</Text>
-                <Text style={styles.subText}>Hi, ik ben Bram, ik ben {age} jaar en dit is mijn portfolio. Wil je meer over mij weten?</Text>
-                <Text style={styles.subText}>Klik hier...</Text>
-            </View>
-            <View style={styles.imageContainer}>
-                <Image style={styles.profileImage} source={require('../../../assets/pictures/ProfilePicture.jpeg')}/>
-            </View>
-        </LinearGradient>
+        <TouchableOpacity>
+            <LinearGradient
+            colors={['#1B48E9', 'transparent']}
+            start={{ x: 0.8, y: 1 }}
+            end={{ x: -2, y: 1 }}
+            style={styles.container}>
+                <View style={styles.textContainer}>
+                    <Text style={styles.titleText}>Over mij</Text>
+                    <Text style={styles.subText}>Hi, ik ben Bram, ik ben {age} jaar en dit is mijn portfolio. Wil je meer over mij weten?</Text>
+                    <Text style={styles.subText}>Klik hier...</Text>
+                </View>
+                <View style={styles.imageContainer}>
+                    <Image style={styles.profileImage} source={require('../../../assets/pictures/ProfilePicture.jpeg')}/>
+                </View>
+            </LinearGradient>
+        </TouchableOpacity>
     )
 }
 

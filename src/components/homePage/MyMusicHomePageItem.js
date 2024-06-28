@@ -1,8 +1,21 @@
-import { View, StyleSheet, Text, Image, ScrollView } from 'react-native';
+import { View, StyleSheet, Text, Image, ScrollView, TouchableOpacity, Linking, Alert } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import AntDesign from '@expo/vector-icons/AntDesign'
 
 export default function MyMusicHomePageItem() {
+    const spotifyProfileUrl = "https://open.spotify.com/user/degooijerbram?si=5f4939dfa094428b";
+
+    const HandleOpenSpotify = async () => {
+        const supported = await Linking.canOpenURL(spotifyProfileUrl);
+
+        if (supported) {
+            await Linking.openURL(spotifyProfileUrl);
+        } 
+        else {
+            Alert.alert('Kan verwijzing niet openen!');
+        }
+    }
+
     return (
         <View style={styles.myMusicContainer}>
             <Image style={styles.spotifyLogo} source={require('../../../assets/pictures/logos/SpotifyLogo.png')} />
@@ -37,10 +50,10 @@ export default function MyMusicHomePageItem() {
                     <Text style={styles.artistItemText}>Eminem</Text>
                 </View>
             </ScrollView>
-            <View style={styles.followMeWrapper}>
+            <TouchableOpacity style={styles.followMeWrapper} onPress={HandleOpenSpotify}>
                 <Text style={styles.followMeText}>Of volg me direct op spotify</Text>
                 <AntDesign style={styles.followMeArrow} name='arrowright' size={20}/>
-            </View>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -74,6 +87,7 @@ const styles = StyleSheet.create({
     },
     artistsWrapper: {
         flexDirection: 'row',
+        paddingBottom: 8,
     },
     artistItem: {
         backgroundColor: '#202020',

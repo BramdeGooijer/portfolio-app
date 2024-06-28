@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, StyleSheet, Text, Image } from "react-native";
+import { View, StyleSheet, Text, Image, TouchableOpacity } from "react-native";
 import AntDesign from '@expo/vector-icons/AntDesign'
 
 export default function ProjectHomePageItem(props) {
@@ -7,59 +7,59 @@ export default function ProjectHomePageItem(props) {
 
     if (props.project === "testsysteem") {
             return (
-                <View style={[styles.container, styles.testsysteemContainer]}>
+                <TouchableOpacity style={[styles.container, styles.testsysteemContainer]}>
                     <View style={[styles.itemImageContainer]}>
                         <Image style={[styles.testsysteemImage]} source={require('../../../assets/pictures/projectItems/TerbergLogoNoText.png')} />
                     </View>
                     <Text style={[styles.titleText, styles.testsysteemText]}>Testsysteem</Text>
-                </View>
+                </TouchableOpacity>
             )
     }
     else if (props.project === "foodie") {
         return (
-            <View style={[styles.container, styles.foodieContainer]}>
+            <TouchableOpacity style={[styles.container, styles.foodieContainer]}>
                 <View style={[styles.itemImageContainer]}>
                     <Image style={[styles.foodieImage]} source={require('../../../assets/pictures/projectItems/FoodieImage.png')} />
                 </View>
                 <Text style={[styles.titleText, styles.foodieText]}>Foodie app</Text>
-            </View>
+            </TouchableOpacity>
         )
     }
     else if (props.project === "qoqon") {
         return (
-            <View style={[styles.container, styles.qoqonContainer]}>
+            <TouchableOpacity style={[styles.container, styles.qoqonContainer]}>
                 <View style={[styles.itemImageContainer]}>
                     <Image style={[styles.qoqonImage]} source={require('../../../assets/pictures/projectItems/QoqonLogo.png')} />
                 </View>
                 <Text style={[styles.titleText, styles.qoqonText]}>Tegeletiketten</Text>
-            </View>
+            </TouchableOpacity>
         )
     }
     else if (props.project === "kpn") {
         return (
-            <View style={[styles.container, styles.kpnContainer]}>
+            <TouchableOpacity style={[styles.container, styles.kpnContainer]}>
                 <View style={[styles.itemImageContainer]}>
                     <Image style={[styles.kpnImage]} source={require('../../../assets/pictures/projectItems/KpnLogo.png')} />
                 </View>
                 <Text style={[styles.titleText, styles.kpnText]}>KPN dashboard</Text>
-            </View>
+            </TouchableOpacity>
         )
     }
     else if (props.project === "steam") {
         return (
-            <View style={[styles.container, styles.steamContainer]}>
+            <TouchableOpacity style={[styles.container, styles.steamContainer]}>
                 <View style={[styles.itemImageContainer]}>
                     <Image style={[styles.steamImage]} source={require('../../../assets/pictures/projectItems/SteamLogo.png')} />
                 </View>
                 <Text style={[styles.titleText, styles.steamText]}>Steam API</Text>
-            </View>
+            </TouchableOpacity>
         )
     }
     else {
         return (
-            <View style={[styles.container, styles.moreContainer]}>
+            <TouchableOpacity style={[styles.container, styles.moreContainer]}>
                 <Text style={[styles.titleText, styles.moreText]}>Bekijk meer van mijn projecten <AntDesign name="arrowright" size={15} /></Text>
-            </View>
+            </TouchableOpacity>
         )
     }
 }
