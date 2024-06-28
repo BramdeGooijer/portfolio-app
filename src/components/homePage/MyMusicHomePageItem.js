@@ -4,11 +4,7 @@ import AntDesign from '@expo/vector-icons/AntDesign'
 
 export default function MyMusicHomePageItem() {
     return (
-        <LinearGradient
-        colors={['#181818', 'transparent']}
-        start={{ x: 0.8, y: 1 }}
-        end={{ x: -2, y: 1 }}
-        style={styles.myMusicContainer}>
+        <View style={styles.myMusicContainer}>
             <Image style={styles.spotifyLogo} source={require('../../../assets/pictures/logos/SpotifyLogo.png')} />
             <Text style={styles.titleText}>Mijn muziek</Text>
             <Text style={styles.subText}>Geïnteresseerd in mijn muzieksmaak?</Text>
@@ -45,7 +41,7 @@ export default function MyMusicHomePageItem() {
                 <Text style={styles.followMeText}>Of volg me direct op spotify</Text>
                 <AntDesign style={styles.followMeArrow} name='arrowright' size={20}/>
             </View>
-        </LinearGradient>
+        </View>
     )
 }
 
@@ -55,6 +51,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         paddingHorizontal: 16,
         paddingVertical: 12,
+        backgroundColor: "#181818"
     },
     titleText: {
         color: 'white',
