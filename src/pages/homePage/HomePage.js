@@ -2,6 +2,7 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import AboutMeHomePageItem from "../../components/homePage/AboutMeHomePageItem";
 import ProjectHomePageItem from "../../components/homePage/ProjectHomePageItem";
 import MyMusicHomePageItem from "../../components/homePage/MyMusicHomePageItem";
+import EntertainmentHomePageItem from "../../components/homePage/EntertainmentHomePageItem";
 
 export default function HomePage() {
     return (
@@ -25,6 +26,7 @@ export default function HomePage() {
                     </View>
 
                     <MyMusicHomePageItem></MyMusicHomePageItem>
+                    <EntertainmentHomePageItem></EntertainmentHomePageItem>
                 </View>
             </ScrollView>
         </View>
@@ -43,6 +45,7 @@ const styles = StyleSheet.create({
         gap: 22,
         alignItems: 'center',
         marginHorizontal: 22,
+        paddingBottom: 100,
     },
     titleText: {
         color: 'white',
