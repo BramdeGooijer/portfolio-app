@@ -45,8 +45,6 @@ const styles = StyleSheet.create({
     movieImage: {
         width: 100,
         height: 141,
-        // aspectRatio: 1,
-        resizeMode: 'contain',
         marginRight: 15,
     },
 
