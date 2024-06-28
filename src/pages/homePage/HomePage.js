@@ -5,6 +5,7 @@ import MyMusicHomePageItem from "../../components/homePage/MyMusicHomePageItem";
 import EntertainmentHomePageItem from "../../components/homePage/EntertainmentHomePageItem";
 import SportsHomePageItem from "../../components/homePage/SportsHomePageItem";
 import GamesHomePageItem from "../../components/homePage/GamesHomePageItem";
+import HolidaysHomePageItem from "../../components/homePage/HolidaysHomePageItem";
 
 export default function HomePage() {
     return (
@@ -31,6 +32,7 @@ export default function HomePage() {
                     <EntertainmentHomePageItem></EntertainmentHomePageItem>
                     <SportsHomePageItem></SportsHomePageItem>
                     <GamesHomePageItem></GamesHomePageItem>
+                    <HolidaysHomePageItem></HolidaysHomePageItem>
                 </View>
             </ScrollView>
         </View>
