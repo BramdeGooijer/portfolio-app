@@ -1,5 +1,6 @@
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 import AntDesign from '@expo/vector-icons/AntDesign';
+import SoftwareProjectTab from "../../components/softwareProjectsPage/SoftwareProjectTab";
 
 export default function SoftwareProjectsPage({navigation}) {
     const age = Math.floor((new Date() - new Date("2004-01-26")) / (1000 * 60 * 60 * 24 * 365.25));
@@ -16,6 +17,10 @@ export default function SoftwareProjectsPage({navigation}) {
                     <TouchableOpacity style={styles.closeButton} onPress={HandleGoBack}>
                         <AntDesign name='close' size={24} color={'white'} />
                     </TouchableOpacity>
+                    <View style={styles.projectTabWrapper}>
+                        <SoftwareProjectTab title='Testsysteem voor de Terberg Connect Module'></SoftwareProjectTab>
+                        <SoftwareProjectTab title='Testsysteem voor de Terberg Connect Module'></SoftwareProjectTab>
+                    </View>
                 </View>
             </ScrollView>
         </View>
@@ -46,5 +51,9 @@ const styles = StyleSheet.create({
         position: 'absolute',
         right: 0,
         marginTop: 5,
+    },
+    projectTabWrapper: {
+        width: '100%',
+        gap: 27,
     },
 })

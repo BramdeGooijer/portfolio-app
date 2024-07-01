@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View, StatusBar } from "react-native";
 import AboutMeHomePageItem from "../../components/homePage/AboutMeHomePageItem";
 import ProjectHomePageItem from "../../components/homePage/ProjectHomePageItem";
 import MyMusicHomePageItem from "../../components/homePage/MyMusicHomePageItem";
@@ -12,6 +12,7 @@ export default function HomePage({navigation}) {
     return (
         
         <View style={styles.container}>
+            <StatusBar barStyle='light-content' />
             <ScrollView style={styles.scrollArea}>
                 <View style={styles.scrollContainer}>
                     <Text style={styles.titleText}>Welkom</Text>

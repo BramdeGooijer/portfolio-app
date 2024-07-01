@@ -21,10 +21,6 @@ export default function App() {
   }
 
   return (
-    // <View style={styles.container}>
-    //   <StatusBar barStyle='light-content' />
-    //   <HomePage></HomePage>
-    // </View>
     <Navigation />
   );
 }

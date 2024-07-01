@@ -1,5 +1,5 @@
 import { View, StyleSheet, Text, Image, ScrollView, TouchableOpacity, Linking, Alert } from 'react-native';
-import AntDesign from '@expo/vector-icons/AntDesign'
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function MyMusicHomePageItem() {
     const spotifyProfileUrl = "https://open.spotify.com/user/degooijerbram?si=5f4939dfa094428b";
