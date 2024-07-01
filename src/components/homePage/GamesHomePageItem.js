@@ -4,7 +4,7 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 export default function GamesHomePageItem() {
     return (
         <View style={styles.gamesContainer}>
-            <Text style={styles.titleText}>Entertainment</Text>
+            <Text style={styles.titleText}>Games</Text>
 
             <ScrollView horizontal={true} style={styles.movieScroller}>
                 <Image style={styles.movieImage} source={require("../../../assets/pictures/games/DarkAndDarkerCover.png")} />

@@ -8,14 +8,14 @@ import GamesHomePageItem from "../../components/homePage/GamesHomePageItem";
 import HolidaysHomePageItem from "../../components/homePage/HolidaysHomePageItem";
 import SocialsHomePageItem from "../../components/homePage/SocialsHomePageItem";
 
-export default function HomePage() {
+export default function HomePage({navigation}) {
     return (
         
         <View style={styles.container}>
             <ScrollView style={styles.scrollArea}>
                 <View style={styles.scrollContainer}>
                     <Text style={styles.titleText}>Welkom</Text>
-                    <AboutMeHomePageItem></AboutMeHomePageItem>
+                    <AboutMeHomePageItem navigation={navigation}></AboutMeHomePageItem>
 
                     <View style={styles.softwareProjectsContainer}>
                         <Text style={styles.itemTitle}>Mijn software projecten</Text>
@@ -45,6 +45,7 @@ export default function HomePage() {
 const styles = StyleSheet.create({
     container: {
         height: '100%',
+        backgroundColor: 'black',
     },
     scrollArea: {
         paddingTop: 50,

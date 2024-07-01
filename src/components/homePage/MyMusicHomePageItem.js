@@ -1,5 +1,4 @@
 import { View, StyleSheet, Text, Image, ScrollView, TouchableOpacity, Linking, Alert } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import AntDesign from '@expo/vector-icons/AntDesign'
 
 export default function MyMusicHomePageItem() {

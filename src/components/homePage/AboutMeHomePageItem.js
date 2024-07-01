@@ -1,11 +1,15 @@
 import { StyleSheet, Text, Image, View, TouchableOpacity } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 
-export default function AboutMeHomePageItem() {
+export default function AboutMeHomePageItem({navigation}) {
     const age = Math.floor((new Date() - new Date("2004-01-26")) / (1000 * 60 * 60 * 24 * 365.25));
 
+    const HandleOpenAboutMe = () => {
+        navigation.navigate('AboutMe');
+    }
+
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={HandleOpenAboutMe}>
             <LinearGradient
             colors={['#1B48E9', 'transparent']}
             start={{ x: 0.8, y: 1 }}
