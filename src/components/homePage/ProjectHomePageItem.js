@@ -2,10 +2,12 @@ import { useState } from "react";
 import { View, StyleSheet, Text, Image, TouchableOpacity } from "react-native";
 import AntDesign from '@expo/vector-icons/AntDesign'
 
-export default function ProjectHomePageItem(props) {
-    const [project, setProject] = useState();
+export default function ProjectHomePageItem({navigation, project}) {
+    const HandleOpenSoftwareProjects = () => {
+        navigation.navigate('SoftwareProjects');
+    }
 
-    if (props.project === "testsysteem") {
+    if (project === "testsysteem") {
             return (
                 <TouchableOpacity style={[styles.container, styles.testsysteemContainer]}>
                     <View style={[styles.itemImageContainer]}>
@@ -15,7 +17,7 @@ export default function ProjectHomePageItem(props) {
                 </TouchableOpacity>
             )
     }
-    else if (props.project === "foodie") {
+    else if (project === "foodie") {
         return (
             <TouchableOpacity style={[styles.container, styles.foodieContainer]}>
                 <View style={[styles.itemImageContainer]}>
@@ -25,7 +27,7 @@ export default function ProjectHomePageItem(props) {
             </TouchableOpacity>
         )
     }
-    else if (props.project === "qoqon") {
+    else if (project === "qoqon") {
         return (
             <TouchableOpacity style={[styles.container, styles.qoqonContainer]}>
                 <View style={[styles.itemImageContainer]}>
@@ -35,7 +37,7 @@ export default function ProjectHomePageItem(props) {
             </TouchableOpacity>
         )
     }
-    else if (props.project === "kpn") {
+    else if (project === "kpn") {
         return (
             <TouchableOpacity style={[styles.container, styles.kpnContainer]}>
                 <View style={[styles.itemImageContainer]}>
@@ -45,7 +47,7 @@ export default function ProjectHomePageItem(props) {
             </TouchableOpacity>
         )
     }
-    else if (props.project === "steam") {
+    else if (project === "steam") {
         return (
             <TouchableOpacity style={[styles.container, styles.steamContainer]}>
                 <View style={[styles.itemImageContainer]}>
@@ -57,7 +59,7 @@ export default function ProjectHomePageItem(props) {
     }
     else {
         return (
-            <TouchableOpacity style={[styles.container, styles.moreContainer]}>
+            <TouchableOpacity onPress={HandleOpenSoftwareProjects} style={[styles.container, styles.moreContainer]}>
                 <Text style={[styles.titleText, styles.moreText]}>Bekijk meer van mijn projecten <AntDesign name="arrowright" size={15} /></Text>
             </TouchableOpacity>
         )
