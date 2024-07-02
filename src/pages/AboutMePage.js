@@ -27,7 +27,7 @@ export default function AboutMePage({navigation}) {
                             </Text>
                         </View>
                         <View style={styles.aboutMeImageWrapper}>
-                            <Image style={styles.aboutMeImage} source={require('../../../assets/pictures/ProfilePicture.jpeg')} />
+                            <Image style={styles.aboutMeImage} source={require('../../assets/pictures/ProfilePicture.jpeg')} />
                         </View>
                     </View>
                     <View style={styles.textNextToImageWrapper}>

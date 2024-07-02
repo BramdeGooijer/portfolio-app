@@ -1,12 +1,12 @@
 import { ScrollView, StyleSheet, Text, View, StatusBar } from "react-native";
-import AboutMeHomePageItem from "../../components/homePage/AboutMeHomePageItem";
-import ProjectHomePageItem from "../../components/homePage/ProjectHomePageItem";
-import MyMusicHomePageItem from "../../components/homePage/MyMusicHomePageItem";
-import EntertainmentHomePageItem from "../../components/homePage/EntertainmentHomePageItem";
-import SportsHomePageItem from "../../components/homePage/SportsHomePageItem";
-import GamesHomePageItem from "../../components/homePage/GamesHomePageItem";
-import HolidaysHomePageItem from "../../components/homePage/HolidaysHomePageItem";
-import SocialsHomePageItem from "../../components/homePage/SocialsHomePageItem";
+import AboutMeHomePageItem from "../components/homePage/AboutMeHomePageItem";
+import ProjectHomePageItem from "../components/homePage/ProjectHomePageItem";
+import MyMusicHomePageItem from "../components/homePage/MyMusicHomePageItem";
+import EntertainmentHomePageItem from "../components/homePage/EntertainmentHomePageItem";
+import SportsHomePageItem from "../components/homePage/SportsHomePageItem";
+import GamesHomePageItem from "../components/homePage/GamesHomePageItem";
+import HolidaysHomePageItem from "../components/homePage/HolidaysHomePageItem";
+import SocialsHomePageItem from "../components/homePage/SocialsHomePageItem";
 
 export default function HomePage({navigation}) {
     return (

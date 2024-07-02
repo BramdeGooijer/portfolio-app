@@ -1,10 +1,7 @@
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 import AntDesign from '@expo/vector-icons/AntDesign';
-import SoftwareProjectTab from "../../components/softwareProjectsPage/SoftwareProjectTab";
 
-export default function SoftwareProjectsPage({navigation}) {
-    const age = Math.floor((new Date() - new Date("2004-01-26")) / (1000 * 60 * 60 * 24 * 365.25));
-
+export default function SteamApiProjectPage({navigation}) {
     const HandleGoBack = () => {
         navigation.goBack();
     }
@@ -13,14 +10,11 @@ export default function SoftwareProjectsPage({navigation}) {
         <View style={styles.container}>
             <ScrollView style={styles.scrollArea}>
                 <View style={styles.scrollContainer}>
-                    <Text style={styles.titleText}>Mijn software projecten</Text>
+                    <Text style={styles.titleText}>Steam API</Text>
                     <TouchableOpacity style={styles.closeButton} onPress={HandleGoBack}>
                         <AntDesign name='close' size={24} color={'white'} />
                     </TouchableOpacity>
-                    <View style={styles.projectTabWrapper}>
-                        <SoftwareProjectTab title='Testsysteem voor de Terberg Connect Module'></SoftwareProjectTab>
-                        <SoftwareProjectTab title='Testsysteem voor de Terberg Connect Module'></SoftwareProjectTab>
-                    </View>
+                    
                 </View>
             </ScrollView>
         </View>
@@ -46,14 +40,12 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 20,
         fontFamily: 'Prompt-Bold',
+        textAlign: 'center',
     },
     closeButton: {
         position: 'absolute',
         right: 0,
         marginTop: 5,
     },
-    projectTabWrapper: {
-        width: '100%',
-        gap: 27,
-    },
+    
 })

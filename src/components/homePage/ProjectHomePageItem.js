@@ -3,13 +3,13 @@ import { View, StyleSheet, Text, Image, TouchableOpacity } from "react-native";
 import AntDesign from '@expo/vector-icons/AntDesign'
 
 export default function ProjectHomePageItem({navigation, project}) {
-    const HandleOpenSoftwareProjects = () => {
-        navigation.navigate('SoftwareProjects');
+    const HandleOpenSoftwareProjects = (page) => {
+        navigation.navigate(page);
     }
 
     if (project === "testsysteem") {
             return (
-                <TouchableOpacity style={[styles.container, styles.testsysteemContainer]}>
+                <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("Testsysteem")} style={[styles.container, styles.testsysteemContainer]}>
                     <View style={[styles.itemImageContainer]}>
                         <Image style={[styles.testsysteemImage]} source={require('../../../assets/pictures/projectItems/TerbergLogoNoText.png')} />
                     </View>
@@ -19,7 +19,7 @@ export default function ProjectHomePageItem({navigation, project}) {
     }
     else if (project === "foodie") {
         return (
-            <TouchableOpacity style={[styles.container, styles.foodieContainer]}>
+            <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("FoodieApp")} style={[styles.container, styles.foodieContainer]}>
                 <View style={[styles.itemImageContainer]}>
                     <Image style={[styles.foodieImage]} source={require('../../../assets/pictures/projectItems/FoodieImage.png')} />
                 </View>
@@ -29,7 +29,7 @@ export default function ProjectHomePageItem({navigation, project}) {
     }
     else if (project === "qoqon") {
         return (
-            <TouchableOpacity style={[styles.container, styles.qoqonContainer]}>
+            <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("Tegeletiketten")} style={[styles.container, styles.qoqonContainer]}>
                 <View style={[styles.itemImageContainer]}>
                     <Image style={[styles.qoqonImage]} source={require('../../../assets/pictures/projectItems/QoqonLogo.png')} />
                 </View>
@@ -39,7 +39,7 @@ export default function ProjectHomePageItem({navigation, project}) {
     }
     else if (project === "kpn") {
         return (
-            <TouchableOpacity style={[styles.container, styles.kpnContainer]}>
+            <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("KpnDashboard")} style={[styles.container, styles.kpnContainer]}>
                 <View style={[styles.itemImageContainer]}>
                     <Image style={[styles.kpnImage]} source={require('../../../assets/pictures/projectItems/KpnLogo.png')} />
                 </View>
@@ -49,7 +49,7 @@ export default function ProjectHomePageItem({navigation, project}) {
     }
     else if (project === "steam") {
         return (
-            <TouchableOpacity style={[styles.container, styles.steamContainer]}>
+            <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("SteamApi")} style={[styles.container, styles.steamContainer]}>
                 <View style={[styles.itemImageContainer]}>
                     <Image style={[styles.steamImage]} source={require('../../../assets/pictures/projectItems/SteamLogo.png')} />
                 </View>
@@ -57,9 +57,29 @@ export default function ProjectHomePageItem({navigation, project}) {
             </TouchableOpacity>
         )
     }
+    else if (project === "twitterzuil") {
+        return (
+            <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("Twitterzuil")} style={[styles.container, styles.twitterContainer]}>
+                <View style={[styles.itemImageContainer]}>
+                    <Image style={[styles.twitterImage]} source={require('../../../assets/pictures/projectItems/Twitterzuil.png')} />
+                </View>
+                <Text style={[styles.titleText, styles.twitterText]}>Twitterzuil</Text>
+            </TouchableOpacity>
+        )
+    }
+    else if (project === "wordle") {
+        return (
+            <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("Wordle")} style={[styles.container, styles.wordleContainer]}>
+                <View style={[styles.itemImageContainer]}>
+                    <Image style={[styles.wordleImage]} source={require('../../../assets/pictures/projectItems/Wordle.png')} />
+                </View>
+                <Text style={[styles.titleText, styles.wordleText]}>TDD Wordle</Text>
+            </TouchableOpacity>
+        )
+    }
     else {
         return (
-            <TouchableOpacity onPress={HandleOpenSoftwareProjects} style={[styles.container, styles.moreContainer]}>
+            <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("SoftwareProjects")} style={[styles.container, styles.moreContainer]}>
                 <Text style={[styles.titleText, styles.moreText]}>Bekijk meer van mijn projecten <AntDesign name="arrowright" size={15} /></Text>
             </TouchableOpacity>
         )
@@ -110,6 +130,16 @@ const styles = StyleSheet.create({
         aspectRatio: 1,
         resizeMode: 'contain',
     },
+    twitterImage: {
+        height: '110%',
+        aspectRatio: 1,
+        resizeMode: 'contain',
+    },
+    wordleImage: {
+        height: '100%',
+        aspectRatio: 1,
+        resizeMode: 'contain',
+    },
     testsysteemContainer: {
         backgroundColor: '#F3F3F3',
     },
@@ -124,6 +154,12 @@ const styles = StyleSheet.create({
     },
     steamContainer: {
         backgroundColor: "#132D61",
+    },
+    twitterContainer: {
+        backgroundColor: "#FFC917",
+    },
+    wordleContainer: {
+        backgroundColor: "#787C7E",
     },
     moreContainer: {
         backgroundColor: '#191E2C',
@@ -143,6 +179,12 @@ const styles = StyleSheet.create({
         lineHeight: 15,
     },
     steamText: {
+        color: 'white',
+    },
+    twitterText: {
+        color: 'white',
+    },
+    wordleText: {
         color: 'white',
     },
     moreText: {

@@ -1,7 +1,8 @@
 import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
+import ProjectHomePageItem from '../homePage/ProjectHomePageItem';
 
-export default function SoftwareProjectTab(props) {
+export default function SoftwareProjectTab({title, firstText, secondText, project, navigation}) {
     const HandleSeeMoreOnPress = () => {
 
     }
@@ -10,21 +11,16 @@ export default function SoftwareProjectTab(props) {
         <View style={styles.tabContainer}>
             <View style={styles.contentWrapper}>
                 <View style={{flex: 1}}>
-                    <Text style={styles.tabTitle}>{props.title}</Text>
+                    <Text style={styles.tabTitle}>{title}</Text>
                     <Text style={styles.tabSubtext}>
-                        Als derde jaars software development student moeten 
+                        {firstText}
                     </Text>
                 </View>
-                <View style={[styles.container, styles.testsysteemContainer]}>
-                        <View style={[styles.itemImageContainer]}>
-                            <Image style={[styles.testsysteemImage]} source={require('../../../assets/pictures/projectItems/TerbergLogoNoText.png')} />
-                        </View>
-                        <Text style={[styles.titleText, styles.testsysteemText]}>Testsysteem</Text>
-                </View>
+                <ProjectHomePageItem navigation={navigation} project={project}></ProjectHomePageItem>
             </View>
 
             <Text style={styles.tabSubtext}>
-                de studenten het vak Innovation volgen, waar de studenten in samenwerking met een bedrijf een opdracht moeten uitvoeren. Ik heb hier in opdracht van Terberg control systems samen met mijn team een proof of concept van een testsysteem moeten maken voor het testen van de door Terberg geproduceerde Connect Modules...
+                {secondText}
             </Text>
 
             <TouchableOpacity style={styles.seeMoreWrapper} onPress={HandleSeeMoreOnPress}>
@@ -57,85 +53,6 @@ const styles = StyleSheet.create({
         color: 'white',
         fontFamily: 'MartelSans-SemiBold',
         lineHeight: 20,
-    },
-    
-    container: {
-        padding: 10,
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-        width: 110,
-        height: 110,
-        borderRadius: 10,
-    },
-    titleText: {
-        fontFamily: 'Prompt-SemiBold',
-        fontSize: 14,
-    },
-    itemImageContainer: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    testsysteemImage: {
-        width: '100%',
-        height: '100%',
-        aspectRatio: 1,
-    },
-    foodieImage: {
-        width: '100%',
-        height: '120%',
-        aspectRatio: 1,
-        resizeMode: 'contain',
-    },
-    qoqonImage: {
-        height: '140%',
-        aspectRatio: 1,
-        resizeMode: 'contain',
-    },
-    kpnImage: {
-        height: '130%',
-        aspectRatio: 1,
-        resizeMode: 'contain',
-    },
-    steamImage: {
-        height: '100%',
-        aspectRatio: 1,
-        resizeMode: 'contain',
-    },
-    testsysteemContainer: {
-        backgroundColor: '#F3F3F3',
-    },
-    foodieContainer: {
-        backgroundColor: "#294406",
-    },
-    qoqonContainer: {
-        backgroundColor: "#1F2B3A",
-    },
-    kpnContainer: {
-        backgroundColor: "#00C300",
-    },
-    steamContainer: {
-        backgroundColor: "#132D61",
-    },
-    moreContainer: {
-        backgroundColor: '#191E2C',
-    },
-    testsysteemText: {
-        color: 'black',
-    },
-    foodieText: {
-        color: 'white',
-    },
-    qoqonText: {
-        color: 'white',
-        fontSize: 12,
-    },
-    kpnText: {
-        color: 'white',
-        lineHeight: 15,
-    },
-    steamText: {
-        color: 'white',
     },
 
     seeMoreWrapper: {
