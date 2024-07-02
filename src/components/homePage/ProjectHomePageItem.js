@@ -7,7 +7,7 @@ export default function ProjectHomePageItem({navigation, project}) {
         navigation.navigate(page);
     }
 
-    if (project === "testsysteem") {
+    if (project === "Testsysteem") {
             return (
                 <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("Testsysteem")} style={[styles.container, styles.testsysteemContainer]}>
                     <View style={[styles.itemImageContainer]}>
@@ -17,7 +17,7 @@ export default function ProjectHomePageItem({navigation, project}) {
                 </TouchableOpacity>
             )
     }
-    else if (project === "foodie") {
+    else if (project === "FoodieApp") {
         return (
             <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("FoodieApp")} style={[styles.container, styles.foodieContainer]}>
                 <View style={[styles.itemImageContainer]}>
@@ -27,7 +27,7 @@ export default function ProjectHomePageItem({navigation, project}) {
             </TouchableOpacity>
         )
     }
-    else if (project === "qoqon") {
+    else if (project === "Tegeletiketten") {
         return (
             <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("Tegeletiketten")} style={[styles.container, styles.qoqonContainer]}>
                 <View style={[styles.itemImageContainer]}>
@@ -37,7 +37,7 @@ export default function ProjectHomePageItem({navigation, project}) {
             </TouchableOpacity>
         )
     }
-    else if (project === "kpn") {
+    else if (project === "KpnDashboard") {
         return (
             <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("KpnDashboard")} style={[styles.container, styles.kpnContainer]}>
                 <View style={[styles.itemImageContainer]}>
@@ -47,7 +47,7 @@ export default function ProjectHomePageItem({navigation, project}) {
             </TouchableOpacity>
         )
     }
-    else if (project === "steam") {
+    else if (project === "SteamApi") {
         return (
             <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("SteamApi")} style={[styles.container, styles.steamContainer]}>
                 <View style={[styles.itemImageContainer]}>
@@ -57,7 +57,7 @@ export default function ProjectHomePageItem({navigation, project}) {
             </TouchableOpacity>
         )
     }
-    else if (project === "twitterzuil") {
+    else if (project === "Twitterzuil") {
         return (
             <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("Twitterzuil")} style={[styles.container, styles.twitterContainer]}>
                 <View style={[styles.itemImageContainer]}>
@@ -67,7 +67,7 @@ export default function ProjectHomePageItem({navigation, project}) {
             </TouchableOpacity>
         )
     }
-    else if (project === "wordle") {
+    else if (project === "Wordle") {
         return (
             <TouchableOpacity onPress={() => HandleOpenSoftwareProjects("Wordle")} style={[styles.container, styles.wordleContainer]}>
                 <View style={[styles.itemImageContainer]}>

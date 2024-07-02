@@ -3,8 +3,8 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import ProjectHomePageItem from '../homePage/ProjectHomePageItem';
 
 export default function SoftwareProjectTab({title, firstText, secondText, project, navigation}) {
-    const HandleSeeMoreOnPress = () => {
-
+    const HandleSeeMoreOnPress = (project) => {
+        navigation.navigate(project);
     }
 
     return (
@@ -23,7 +23,7 @@ export default function SoftwareProjectTab({title, firstText, secondText, projec
                 {secondText}
             </Text>
 
-            <TouchableOpacity style={styles.seeMoreWrapper} onPress={HandleSeeMoreOnPress}>
+            <TouchableOpacity style={styles.seeMoreWrapper} onPress={() => HandleSeeMoreOnPress(project)}>
                 <Text style={styles.seeMoreText}>Zie meer</Text>
                 <AntDesign style={styles.seeMoreArrow} name='arrowright' size={20}/>
             </TouchableOpacity>

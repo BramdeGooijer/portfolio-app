@@ -21,11 +21,11 @@ export default function HomePage({navigation}) {
                     <View style={styles.softwareProjectsContainer}>
                         <Text style={styles.itemTitle}>Mijn software projecten</Text>
                         <View style={styles.projectItemWrapper}>
-                            <ProjectHomePageItem navigation={navigation} project="testsysteem"></ProjectHomePageItem>
-                            <ProjectHomePageItem navigation={navigation} project="foodie"></ProjectHomePageItem>
-                            <ProjectHomePageItem navigation={navigation} project="qoqon"></ProjectHomePageItem>
-                            <ProjectHomePageItem navigation={navigation} project="kpn"></ProjectHomePageItem>
-                            <ProjectHomePageItem navigation={navigation} project="steam"></ProjectHomePageItem>
+                            <ProjectHomePageItem navigation={navigation} project="Testsysteem"></ProjectHomePageItem>
+                            <ProjectHomePageItem navigation={navigation} project="FoodieApp"></ProjectHomePageItem>
+                            <ProjectHomePageItem navigation={navigation} project="Tegeletiketten"></ProjectHomePageItem>
+                            <ProjectHomePageItem navigation={navigation} project="KpnDashboard"></ProjectHomePageItem>
+                            <ProjectHomePageItem navigation={navigation} project="SteamApi"></ProjectHomePageItem>
                             <ProjectHomePageItem navigation={navigation}></ProjectHomePageItem>
                         </View>
                     </View>
